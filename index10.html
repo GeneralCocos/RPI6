@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<h1>Задание 10.</h1>
+<a>Выполнить пример, проверить работу. </a>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+
+<script> 
+    $(document).ready(function () { 
+    $("button").click(function () { 
+    $("p").toggle(5000); 
+    }); 
+    }); 
+   </script> 
+   </head> 
+   <body> 
+   <button>Toggle</button> 
+   <p>This is a paragraph with little content.</p> 
+   <p>This is another small paragraph.</p> 
+
+   
+<h2>Ответ:</h2>
+<a>Изменили скорость анимации. Всё работает.</a>
+
+
+
+<button onclick="redirectToPage()">Продолжить</button>
+<script>
+function redirectToPage() {
+  window.location.href = "index11.html";
+}
+</script>
+</html>

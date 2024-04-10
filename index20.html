@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<h1>Задание 20.</h1>
+<a> Выполнить пример, проверить работу. Разобраться, как организована работа  метода attr(). Определите, значения каких еще атрибутов можно так получить. </a>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+
+<head> 
+    <script> 
+     $(document).ready(function () { 
+     $("button").click(function () { 
+     alert($("#w3s").attr("href")); 
+     }); 
+     }); 
+    </script> 
+</head> 
+    <body> 
+    <p><a href="http://www.w3schools.com" id="w3s">W3Schools.com</a></p> 
+    <button>Show href Value</button> 
+</body> 
+    
+    
+<h2>Ответ:</h2>
+<p>Помимо href, вы также можете получить значения таких атрибутов, как id, class, src, title и так далее. Просто укажите имя атрибута в качестве параметра метода attr() для получения его значения. Всё работает.</p>
+
+<button onclick="redirectToPage()">Продолжить</button>
+<script>
+function redirectToPage() {
+  window.location.href = "individ1.html";
+}
+</script>
+</html>

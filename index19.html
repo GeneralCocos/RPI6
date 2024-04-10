@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<h1>Задание 19.</h1>
+<a>Выполнить пример, проверить работу. Разобраться, как организована работа  метода val(). </a>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+
+<head> 
+    <script> 
+     $(document).ready(function () { 
+     $("button").click(function () { 
+     alert("Value: " + $("#test").val()); 
+     }); 
+     }); 
+    </script> 
+    </head> 
+    <body> 
+    <p>Name: <input type="text" id="test" value="Mickey Mouse"></p> 
+    <button>Show Value</button> 
+    </body>
+
+<button onclick="redirectToPage()">Продолжить</button>
+<script>
+function redirectToPage() {
+  window.location.href = "index20.html";
+}
+</script>
+</html>

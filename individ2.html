@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<h1>Индивидуальное задание 2.</h1>
+<h2>Вариант 1: в исходный файл Experiments2.html добавить обработку события «наведение  мышки на элемент». Если этот элемент относится к таблице (в теге <img>), то при  наведении на него курсора, он должен скрываться. </h2>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+<body>
+    <style>
+        img {
+          max-width: 200px; /* Just for demonstration */
+        }
+      </style>
+      </head>
+      <body>
+      
+      <img src="img/img.png" alt="Image 1">
+      
+      <script>
+        $(document).ready(function(){
+          // Обработка события "наведение мышки на элемент"
+          $('img').mouseenter(function(){
+            $(this).hide(); // Скрытие элемента, на который навели мышкой
+          });
+        });
+      </script>
+
+
+</body>
+<button onclick="redirectToPage()">Продолжить</button>
+<script>
+function redirectToPage() {
+  window.location.href = "individ3.html";
+}
+</script>
+</html>

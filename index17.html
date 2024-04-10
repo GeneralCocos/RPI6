@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<h1>Задание 17.</h1>
+<a>Выполнить пример, проверить работу. Разобраться, как организована работа  метода each( ).</a>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+
+<body> 
+    <script src="http://code.jquery.com/jquery.js"></script> 
+    <a href="http://wikipedia.ru">Википедия</a> 
+    <ul> 
+        <li><a href="http://jquery.com">jQuery</a></li> 
+        <li><a href="http://sizzlejs.com">Sizzle</a></li> 
+        <li><a href="http://blog.jquery.com">jQuery Blog</a></li> <!-- Добавлено закрытие тега <a> -->
+    </ul> 
+    <script> 
+        var links = $('li a'); // найти все ссылки на странице внутри LI 
+        links.each(function (i, a) { 
+            alert(i + ': ' + a.innerHTML); 
+            if (i == 1) return false; // стоп на элементе коллекции с индексом 1  
+        }); // Добавлено закрытие функции each()
+    </script> 
+
+
+<h2>Ответ:</h2>
+<a>Всё работает.</a>
+
+
+<button onclick="redirectToPage()">Продолжить</button>
+<script>
+function redirectToPage() {
+  window.location.href = "index18.html";
+}
+</script></body>
+</html>

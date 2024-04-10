@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<h1>Индивидуальное задание 3.</h1>
+<h2>Вариант 1: создать файл Individual_3.html, добавить два рисунка, невидимые при загрузке  страницы, и две кнопки.
+При нажатии на одну кнопку должно в цикле срабатывать  проявление первой картинки и исчезновение второй картинки со скоростью 2000, а затем  наоборот, при нажатии на вторую кнопку
+обе картинки должны появиться и прекратить  мигание.  </h2>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+<body>
+    <style>
+        img {
+          display: none; 
+          width: 200px; 
+        height: auto;
+        }
+      </style>
+      </head>
+      <body>
+      
+      <img src="img/cat1.png" alt="Cat 1">
+      <img src="img/cat2.png" alt="Cat 2">
+      <button id="button1">Показать/скрыть котов</button>
+      <button id="button2">Показать обоих котов</button>
+      
+      <script>
+        $(document).ready(function(){
+          var intervalId;
+      
+         
+          $('#button1').click(function(){
+            if (intervalId) {
+              clearInterval(intervalId); 
+              intervalId = null;
+            } else {
+              intervalId = setInterval(function(){
+                $('img:eq(0)').fadeIn(2000); 
+                $('img:eq(1)').fadeToggle(2000); 
+              }, 2000);
+            }
+          });
+      
+
+          $('#button2').click(function(){
+            clearInterval(intervalId); 
+            intervalId = null;
+            $('img').fadeIn(2000); 
+          });
+        });
+      </script>
+
+
+</body>
+<button onclick="redirectToPage()">Продолжить</button>
+<script>
+function redirectToPage() {
+  window.location.href = "individ4.html";
+}
+</script>
+</html>

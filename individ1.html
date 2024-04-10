@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<h1>Индивидуальное задание 1.</h1>
+<h2>Вариант 1: в исходный файл Experiments.html добавить в начало две кнопки: одну-для  скрытия элементов, другую – для отображения скрытых элементов. Настроить методы  click( ) кнопок, так чтобы они то скрывали, то отображали нечетные элементы с классом  MsoNormal. </h2>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+<body>
+
+
+<div id="content">
+    <p class="MsoNormal">Element 1</p>
+    <p class="MsoNormal">Element 2</p>
+    <p class="MsoNormal">Element 3</p>
+    <p class="MsoNormal">Element 4</p>
+    <p class="MsoNormal">Element 5</p>
+</div>
+
+<button id="hideButton">Скрыть нечетные</button>
+<button id="showButton">Показать скрытые</button>
+
+<script>
+    $(document).ready(function(){
+        $("#hideButton").click(function(){
+            $(".MsoNormal:even").hide();
+        });
+
+        $("#showButton").click(function(){
+            $(".MsoNormal:hidden").show();
+        });
+    });
+</script>
+    
+
+
+
+<button onclick="redirectToPage()">Продолжить</button>
+</body>
+
+<script>
+function redirectToPage() {
+  window.location.href = "individ2.html";
+}
+</script>
+</html>

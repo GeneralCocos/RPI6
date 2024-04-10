@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<h1>Задание 8.</h1>
+<a>Выполнить пример, проверить работу. Проверить как работает focus() и blur(),  а также разобраться с настройкой стилей через .css("свойство", "значение"). </a>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+
+<script> 
+    $(document).ready(function () { 
+    $("input").focus(function () { 
+    $(this).css("background-color", "#cccccc"); 
+    }); 
+    $("input").blur(function () { 
+    $(this).css("background-color", "#ffffff"); 
+    }); 
+    }); 
+   </script> 
+</head> 
+<body> 
+   Name: <input type="text" name="fullname"><br> 
+   Email: <input type="text" name="email"> 
+</body>
+   
+
+<h2>Ответ:</h2>
+<p>Функция blur() назначает обработчик события так, что когда пользователь уводит фокус с любого поля ввода input в документе, выполняется функция. А функция  focus когда пользователь уводит фокус. Всё работает.</p>
+
+
+
+<button onclick="redirectToPage()">Продолжить</button>
+<script>
+function redirectToPage() {
+  window.location.href = "index9.html";
+}
+</script>
+</html>

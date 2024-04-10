@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<h1>Задание 12.</h1>
+<a>Выполнить пример, проверить работу. Разобраться с настройками элементов  div, обратите внимание на свойство display:none , которое при загрузке странице  позволяет не отражать div. </a>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+
+</script> 
+<script> 
+ $(document).ready(function () { 
+ $("button").click(function () { 
+ $("#div1").fadeOut(); 
+ $("#div2").fadeOut("slow"); 
+ $("#div3").fadeOut(3000); 
+ }); 
+ }); 
+</script> 
+</head> 
+<body> 
+<p>Demonstrate fadeOut() with different parameters.</p>
+<button>Click to fade out boxes</button> 
+<br><br> 
+<div id="div1" style="width:80px;height:80px;background-color:red;"></div><br> <div id="div2" style="width:80px;height:80px;background-color:green;"></div><br> <div id="div3" style="width:80px;height:80px;background-color:blue;"></div> 
+
+
+   
+<h2>Ответ:</h2>
+<a>Всё работает.</a>
+
+
+
+<button onclick="redirectToPage()">Продолжить</button>
+<script>
+function redirectToPage() {
+  window.location.href = "index13.html";
+}
+</script>
+</html>
